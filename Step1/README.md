@@ -76,3 +76,35 @@
     ```sh
     cd ../
     ```
+
+## Exercise 3 - Adding a Version Number and Configured Header File
+
+### Build and Run / Exercise 3
+
+- Prepare
+
+    ```sh
+    cd Step1_build
+    ```
+
+- Build
+
+    ```sh
+    cmake --build .
+    ```
+
+- Run
+
+    ```sh
+    ./Tutorial
+    # => ./Tutorial Version 1.0
+    # => Usage: ./Tutorial number
+    ```
+
+    > `setopt interactivecomments` may be required for running the above script on zsh.
+
+- Disorganize
+
+    ```sh
+    cd ../
+    ```
