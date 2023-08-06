@@ -1,16 +1,15 @@
-
 add_library(MathFunctions MathFunctions.cxx)
 
-option(USE_MYMATH ON)
+option(USE_MYMATH "Use tutorial provided math implementation" ON)
 
-if(USE_MYMATH EQUAL ON)
-    target_compile_definitions(MathFunctions USE_MYMATH)
+if(USE_MYMATH)
+  target_compile_definitions(MathFunctions PRIVATE "USE_MYMATH")
 endif()
 
-if(USE_MYMATH EQUAL ON)
-    add_library(SqrtLibrary mysqrt.cxx)
+if(USE_MYMATH)
+  add_library(SqrtLibrary STATIC mysqrt.cxx)
 endif()
 
-if(USE_MYMATH EQUAL ON)
-    target_link_libraries(MathFunctions PUBLIC SqrtLibrary)
+if(USE_MYMATH)
+  target_link_libraries(MathFunctions PUBLIC SqrtLibrary)
 endif()
