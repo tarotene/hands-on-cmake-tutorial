@@ -41,3 +41,38 @@
     ```sh
     cd ../
     ```
+
+## Exercise 2 - Specifying the C++ Standard
+
+### Build and Run / Exercise 2
+
+- Prepare
+
+    ```sh
+    cd Step1_build
+    ```
+
+- Build
+
+    ```sh
+    cmake --build .
+    ```
+
+- Run
+
+    ```sh
+    ./Tutorial 4294967296
+    # => The square root of 4.29497e+09 is 65536
+    ./Tutorial 10
+    # => The square root of 10 is 3.16228
+    ./Tutorial
+    # => Usage: ./Tutorial number
+    ```
+
+    > `setopt interactivecomments` may be required for running the above script on zsh.
+
+- Disorganize
+
+    ```sh
+    cd ../
+    ```
