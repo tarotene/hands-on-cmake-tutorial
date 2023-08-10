@@ -10,9 +10,9 @@ if(USE_MYMATH)
   # library that just does sqrt
   add_library(SqrtLibrary STATIC mysqrt.cxx)
 
-  # TODO 7: Link SqrtLibrary to tutorial_compiler_flags
+  target_link_libraries(SqrtLibrary PUBLIC tutorial_compiler_flags)
 
   target_link_libraries(MathFunctions PUBLIC SqrtLibrary)
 endif()
 
-# TODO 6: Link MathFunctions to tutorial_compiler_flags
+target_link_libraries(MathFunctions PUBLIC tutorial_compiler_flags)
